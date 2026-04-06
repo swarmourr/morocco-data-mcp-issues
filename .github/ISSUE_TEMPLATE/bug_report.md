@@ -1,38 +1,90 @@
----
-name: Bug report
-about: Create a report to help us improve
-title: ''
-labels: ''
-assignees: ''
+name: "🐞 Bug Report"
+description: Report something that is broken or incorrect
+title: "[Bug]: "
+labels: ["bug"]
+body:
 
----
+* type: markdown
+  attributes:
+  value: |
+  Thanks for reporting a bug 🙌
+  Please fill out the details below to help us reproduce and fix the issue.
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+* type: input
+  id: tool
+  attributes:
+  label: Tool Name
+  description: Which MCP tool were you using?
+  placeholder: e.g. search_datasets, file_preview, query_data_sql
+  validations:
+  required: true
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+* type: textarea
+  id: steps
+  attributes:
+  label: What did you do?
+  description: Describe the exact steps or input/query used
+  placeholder: |
+  1. Called tool with...
+  2. Used query...
+  3. Got response...
+  validations:
+  required: true
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+* type: textarea
+  id: expected
+  attributes:
+  label: Expected Behavior
+  description: What should have happened?
+  validations:
+  required: true
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+* type: textarea
+  id: actual
+  attributes:
+  label: Actual Behavior
+  description: What actually happened?
+  validations:
+  required: true
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+* type: dropdown
+  id: environment
+  attributes:
+  label: Environment
+  description: Where are you running MCP?
+  options:
+  - Hosted server (mcp.morinsight.dev)
+  - Self-hosted
+  validations:
+  required: true
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
+* type: dropdown
+  id: client
+  attributes:
+  label: Client
+  description: Which client are you using?
+  options:
+  - Claude Desktop
+  - Claude Code
+  - Cursor
+  - VS Code
+  - Other
+  validations:
+  required: true
 
-**Additional context**
-Add any other context about the problem here.
+* type: textarea
+  id: logs
+  attributes:
+  label: Logs / Error Messages
+  description: Paste any relevant logs or error messages
+  placeholder: Paste here...
+  validations:
+  required: false
+
+* type: textarea
+  id: additional
+  attributes:
+  label: Additional Context
+  description: Any other details that might help
+  validations:
+  required: false
