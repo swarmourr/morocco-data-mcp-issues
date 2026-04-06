@@ -1,78 +1,145 @@
 # Morocco Open Data MCP — Issue Tracker
 
-This is the **issues-only** repository for the Morocco Open Data MCP Server.
+🚨 This repository is **only for issues**.
 
-No code lives here. Use this repo to report bugs, request features, and give feedback.
+No source code is maintained here.
+
+Use this repo to:
+
+* Report bugs
+* Request features
+* Flag data quality problems
+* Suggest documentation improvements
+
+---
+
+## Before Opening an Issue
+
+Please check:
+
+* Existing issues (open and closed)
+* That the problem is reproducible
+* That the server is up: https://mcp.morinsight.dev/health
+
+Duplicate or incomplete issues may be closed.
 
 ---
 
 ## How to Open an Issue
 
-1. Go to the [**Issues**](../../issues) tab
+1. Go to the **Issues** tab
 2. Click **New Issue**
-3. Pick the right template and fill it in
+3. Select the appropriate template
+4. Fill in all required details
 
 ---
 
 ## Issue Templates
 
-### Bug Report
-Something is broken or returning wrong results.
+### 🐞 Bug Report
+
+Something is broken or returning incorrect results.
 
 Please include:
-- Tool name (e.g. `search_datasets`, `file_preview`, `query_data_sql`)
-- What you did — input/query you used
-- What you expected vs. what happened
-- Are you using the **hosted server** or **self-hosted**?
-- Client: Claude Desktop / Claude Code / Cursor / VS Code / other
 
-### Feature Request
-You want a new tool, filter, or behavior improvement.
+* Tool name (e.g. `search_datasets`, `file_preview`, `query_data_sql`)
+* What you did (input/query)
+* Expected result vs actual result
+* Environment:
 
-Please include:
-- What you're trying to accomplish
-- Which dataset or data type you're working with
-- Why existing tools don't cover it
+  * Hosted server or self-hosted
+  * Client (Claude Desktop / Claude Code / Cursor / VS Code / other)
 
-### Data Quality Issue
-Data returned looks wrong, stale, or incomplete.
+---
+
+### ✨ Feature Request
+
+Suggest a new capability or improvement.
 
 Please include:
-- Dataset name or ID
-- Resource ID (if applicable)
-- What looks wrong and why
 
-### Documentation Issue
-Something in the README, config examples, or tool descriptions is missing, wrong, or confusing.
+* What you're trying to accomplish
+* Relevant dataset or data type
+* Why existing tools are insufficient
+
+---
+
+### 📊 Data Quality Issue
+
+Data appears incorrect, outdated, or incomplete.
+
+Please include:
+
+* Dataset name or ID
+* Resource ID (if applicable)
+* Description of the issue
+
+---
+
+### 📚 Documentation Issue
+
+Something is missing, incorrect, or unclear in the documentation.
+
+Please include:
+
+* What is wrong or confusing
+* Suggested improvement (if possible)
 
 ---
 
 ## Hosted Server
 
-| | URL |
-|-|-----|
-| MCP endpoint | `https://mcp.morinsight.dev/mcp/` |
-| Health check | `https://mcp.morinsight.dev/health` |
+| Service      | URL                               |
+| ------------ | --------------------------------- |
+| MCP endpoint | https://mcp.morinsight.dev/mcp/   |
+| Health check | https://mcp.morinsight.dev/health |
 
-> Runs on Render free tier — first request after inactivity may take ~30s to wake up.
-> If the health check is down for more than a few minutes, open an issue with the label `server-down`.
+⏱ Cold start: ~30 seconds after inactivity (Render free tier)
+
+🚨 If the server appears down:
+
+1. Check the health endpoint
+2. Wait ~30 seconds (cold start)
+3. If still down, open an issue with label `server-down`
 
 ---
 
 ## Labels
 
-| Label | Meaning |
-|-------|---------|
-| `bug` | Broken or incorrect behavior |
-| `feature` | New tool or capability |
-| `data-quality` | Issue with data from data.gov.ma |
-| `docs` | Documentation fix or improvement |
-| `server-down` | Hosted server unreachable |
-| `needs-repro` | More info needed to reproduce |
-| `good-first-issue` | Easy fix, good for contributors |
-| `wontfix` | Out of scope or upstream limitation |
+| Label              | Meaning                             |
+| ------------------ | ----------------------------------- |
+| `bug`              | Broken or incorrect behavior        |
+| `feature`          | New capability or enhancement       |
+| `data-quality`     | Issues with dataset content         |
+| `docs`             | Documentation improvements          |
+| `server-down`      | Hosted server unavailable           |
+| `needs-repro`      | More information required           |
+| `good-first-issue` | Beginner-friendly task              |
+| `wontfix`          | Out of scope or upstream limitation |
+
+> Labels are optional — maintainers will assign them if needed.
+
+---
+
+## Scope
+
+This repository covers:
+
+* MCP server behavior
+* Tool execution and errors
+* Data returned through MCP tools
+
+This repository does **NOT** cover:
+
+* Direct issues with data.gov.ma (unless exposed via MCP)
+* General questions about open data outside this project
 
 ---
 
 ## Links
-- [data.gov.ma](https://data.gov.ma) — Morocco's national open data portal
+
+* Morocco Open Data Portal: https://data.gov.ma
+
+---
+
+Thanks for helping improve the Morocco Open Data MCP ecosystem 🙌
