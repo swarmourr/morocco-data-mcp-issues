@@ -75,6 +75,4 @@ Something in the README, config examples, or tool descriptions is missing, wrong
 ---
 
 ## Links
-
-- [Morocco Open Data MCP — main repo](https://github.com/hamzasafri/morocco-mcp)
 - [data.gov.ma](https://data.gov.ma) — Morocco's national open data portal
